@@ -9,7 +9,7 @@ body{
   height:100vh;
 }
 
-/* The colour palette I have chosen for my prototype website I made to be dark neutral colours, as I aimed the users to be drawn to the images and visual effects, contrasting against the background. I found that these colours also made the website feel more dramatic, with this contrast.  */ 
+/* The colour palette I have chosen for my prototype website I made to be dark neutral colours, as I aimed for the users to be drawn to the images and visual effects, contrasting against the background. I found that these colours also made the website feel more dramatic, with this contrast.  */ 
 :root{
     --comp-col-01:#312342;
     --comp-col-02:#344057;
@@ -18,7 +18,7 @@ body{
 }
 
 
-/*In order to make my website scroll horizontalling, I experimented with two different techniques, changing the width of my content, and using divs to rotate and translate the content. I decided to chose the rotation option, as I preferred the scrolling effect. To aid in creating this scroll effect, I used techniques by Red Stapler in this tutorial https://www.youtube.com/watch?v=OeaHnxahf40&ab_channel=RedStapler to create the effect for my prototype */ 
+/*In order to make my website scroll horizontally, I experimented with two different techniques, changing the width of my content, and using divs to rotate and translate the content. I decided to choose the rotation option, as I preferred the scrolling effect. To aid in creating this scroll effect, I used techniques by Red Stapler in this tutorial https://www.youtube.com/watch?v=OeaHnxahf40&ab_channel=RedStapler to create the effect for my prototype */ 
 .outer-wrapper{
   height:100vw;
   width:100vw;
