@@ -1,0 +1,171 @@
+*{
+    background-color: var(--comp-col-01);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  height:100vh;
+}
+
+/* The colour palette I have chosen for my prototype website I made to be dark neutral colours, as I aimed the users to be drawn to the images and visual effects, contrasting against the background. I found that these colours also made the website feel more dramatic, with this contrast.  */ 
+:root{
+    --comp-col-01:#312342;
+    --comp-col-02:#344057;
+    --comp-col-03:#223642;
+    --comp-col-04:#1f2d3b;
+}
+
+
+/*In order to make my website scroll horizontalling, I experimented with two different techniques, changing the width of my content, and using divs to rotate and translate the content. I decided to chose the rotation option, as I preferred the scrolling effect. To aid in creating this scroll effect, I used techniques by Red Stapler in this tutorial https://www.youtube.com/watch?v=OeaHnxahf40&ab_channel=RedStapler to create the effect for my prototype */ 
+.outer-wrapper{
+  height:100vw;
+  width:100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position:absolute;
+}
+
+/* This is the inner content wrapper that my images and slides are held within */
+.wrapper{
+  width: 400vw;
+  display: flex;
+  flex-direction: row;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+ }
+
+ /* These slides hold each of my images. In this prototype, the images are centered within each div, however for a wider project in the future, it would be interesting to see the images displayed in more of an abstract, less uniform display. */
+.slide{
+  width:100vw;
+  height:100vh;
+}
+
+.one{
+  background-color: var(--comp-col-02);
+  position: relative;
+}
+
+.two{
+  background-color: var(--comp-col-03);
+  position: relative;
+}
+
+.three{
+  background-color: var(--comp-col-04);
+  position: relative;
+}
+
+.four{
+  background-color: var(--comp-col-02);
+  position: relative;
+}
+
+.five{
+  background-color: var(--comp-col-03);
+  position: relative;
+}
+
+.six{
+  background-color: var(--comp-col-04);
+  position: relative;
+}
+
+/* Below are my 'fade in images'. These are the alternate smudged versions of the pictures, meant to represent changing memories. The full effect of these images can be seen when the image is hovered over, with changes to the opacity adding more depth to the effect. Overall, I am fairly happy with how this effect has turned out, however I would like there to be a smoother transition when the user is no longer hovering over the image, to give a less jarring feedback. */ 
+/* The resource I used to help create this effect was the 'How to Add a CSS Fade-in Transition Animation to Text, Images, Scroll & Hover' article by Jamie Juviler https://blog.hubspot.com/website/css-fade-in */
+.fadeimage {
+  opacity: 20%;
+  width: 50%;
+  height:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fadeimage:hover {
+  opacity: 80%;
+  transition: opacity 2s ease-in;
+}
+
+
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+/* These are the images that are static on my prototype, each with the blurring animation applied to them */
+.img1{
+  animation: animateImg 3s linear alternate infinite;
+  width: 50%;
+  height:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.img2{
+  animation: animateImg 3s linear -3s alternate infinite;
+  width: 50%;
+  height:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .img3{
+  animation: animateImg 3s linear -3s alternate infinite;
+  width: 50%;
+  height:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+
+  .img4{
+  animation: animateImg 3s linear -3s alternate infinite;
+  width: 50%;
+  height:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .img5{
+  animation: animateImg 3s linear -3s alternate infinite;
+  width: 50%;
+  height:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .img6{
+  animation: animateImg 3s linear -3s alternate infinite;
+  width: 50%;
+  height:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+/* This is the looping animation I have on the images to help add visual interest and movement to the website, encouraging people to continue scrolling */
+@keyframes animateImg{
+    from{
+      filter: blur(0px);
+    }
+    to{
+      filter: blur(10px);
+    }
+  }
